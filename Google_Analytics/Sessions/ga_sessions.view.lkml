@@ -432,7 +432,21 @@ view: ga_sessions {
     label: "Users"
     description: "The total number of users for the requested time period."
     type: count_distinct
-    allow_approximate_optimization: yes
+    allow_approximate_optimization: no
+    sql: ${full_visitor_id} ;;
+
+    value_format_name: formatted_number
+    drill_fields: [client_id, account.id, visit_number, hits_total, page_views_total, time_on_site_total]
+  }
+
+
+  measure: unique_visitors2 {
+    view_label: "Audience"
+    group_label: "User"
+    label: "Users2"
+    description: "The total number of users for the requested time period."
+    type: count_distinct
+    allow_approximate_optimization: no
     sql: ${full_visitor_id} ;;
 
     value_format_name: formatted_number
