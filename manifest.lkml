@@ -5,13 +5,13 @@ project_name: "block-ga-360"
 
 # Used in google_analytics_block.model connection param
 constant: CONNECTION_NAME {
-  value: "looker-private-demo"
+  value: "eb_dashboard"
   export: override_required
 }
 
 # Used in ga_sessions.view sql_table_name
 constant: SCHEMA_NAME {
-  value: "bigquery-public-data.google_analytics_sample"
+  value: "eb-seo.58859086"
   export: override_optional
 }
 
