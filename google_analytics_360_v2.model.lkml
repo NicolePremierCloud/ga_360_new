@@ -26,6 +26,13 @@ named_value_format: formatted_number {
   value_format:"0"
 }
 
-explore: all_pages {}
+explore: all_pages {
+  join: landing_pages {
+    type: left_outer
+    sql_on: ${all_pages.profile}=${landing_pages.profile} ;;
+    relationship: many_to_many
+  }
+}
 explore: landing_pages {}
 explore: top_events {}
+
