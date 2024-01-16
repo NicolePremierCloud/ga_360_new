@@ -14,6 +14,10 @@ view: all_pages {
     type: number
     sql: ${TABLE}.avg_time_on_page ;;
   }
+  dimension: bounce_rate {
+    type: number
+    sql: ${TABLE}.bounce_rate ;;
+  }
   dimension_group: date {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
