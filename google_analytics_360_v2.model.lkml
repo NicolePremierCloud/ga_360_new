@@ -10,6 +10,8 @@ include: "/explores/*.explore.lkml"
 include: "/site_content_views/all_pages.view.lkml"
 include: "/site_content_views/landing_pages.view.lkml"
 include: "/site_content_views/top_events.view.lkml"
+include: "/site_content_views/content_drilldown.view.lkml"
+include: "/views/exit_pages.view.lkml"
 
 
 datagroup: bqml_datagroup {
@@ -29,3 +31,5 @@ named_value_format: formatted_number {
 explore: all_pages {}
 explore: landing_pages {}
 explore: top_events {}
+explore: content_drilldown {}
+explore: exit_pages {}
