@@ -32,7 +32,13 @@ view: top_events {
   dimension: event_category {
     type: string
     sql: ${TABLE}.event_category ;;
+    drill_fields: [category_drill*]
   }
+
+  set: category_drill {
+    fields: [event_label, event_action]
+  }
+
   dimension: event_label {
     type: string
     sql: ${TABLE}.event_label ;;
