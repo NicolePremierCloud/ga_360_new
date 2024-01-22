@@ -10,7 +10,7 @@ view: all_pages {
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}._fivetran_synced ;;
   }
-  measure: avg_time_on_page {
+  dimension: avg_time_on_page {
     type: number
     sql: ${TABLE}.avg_time_on_page ;;
   }
@@ -37,17 +37,9 @@ view: all_pages {
     type: number
     sql: ${TABLE}.exit_rate ;;
   }
-  dimension: medium {
-    type: string
-    sql: ${TABLE}.medium ;;
-  }
   dimension: page_path {
     type: string
     sql: ${TABLE}.page_path ;;
-  }
-  dimension: page_title {
-    type: string
-    sql: ${TABLE}.page_title ;;
   }
   dimension: page_value {
     type: number
