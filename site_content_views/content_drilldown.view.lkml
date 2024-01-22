@@ -32,7 +32,13 @@ view: content_drilldown {
   dimension: page_path {
     type: string
     sql: ${TABLE}.page_path ;;
+    drill_fields: [page_drills*]
   }
+
+  set: page_drills{
+    fields: [page_path_level_1]
+  }
+
   dimension: page_path_level_1 {
     type: string
     sql: ${TABLE}.page_path_level_1 ;;
