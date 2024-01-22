@@ -10,8 +10,8 @@ view: content_drilldown {
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}._fivetran_synced ;;
   }
-  dimension: avg_time_on_page {
-    type: number
+  measure: avg_time_on_page {
+    type: time
     sql: ${TABLE}.avg_time_on_page ;;
   }
   dimension: bounce_rate {
