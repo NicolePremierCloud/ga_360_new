@@ -11,7 +11,7 @@ view: landing_pages {
     sql: ${TABLE}._fivetran_synced ;;
   }
   measure: avg_session_duration {
-    type: time
+    type: number
     sql: ${TABLE}.avg_session_duration ;;
   }
   dimension: bounce_rate {

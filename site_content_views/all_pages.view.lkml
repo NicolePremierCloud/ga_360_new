@@ -11,7 +11,7 @@ view: all_pages {
     sql: ${TABLE}._fivetran_synced ;;
   }
   measure: avg_time_on_page {
-    type: time
+    type: number
     sql: ${TABLE}.avg_time_on_page ;;
   }
   dimension: bounce_rate {

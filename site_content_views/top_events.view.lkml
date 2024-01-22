@@ -11,7 +11,7 @@ view: top_events {
     sql: ${TABLE}._fivetran_synced ;;
   }
   measure: avg_event_value {
-    type: time
+    type: number
     sql: ${TABLE}.avg_event_value ;;
   }
   dimension: avg_session_duration {
