@@ -10,8 +10,8 @@ view: top_events {
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}._fivetran_synced ;;
   }
-  dimension: avg_event_value {
-    type: number
+  measure: avg_event_value {
+    type: time
     sql: ${TABLE}.avg_event_value ;;
   }
   dimension: avg_session_duration {
