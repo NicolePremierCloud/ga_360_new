@@ -10,7 +10,7 @@ view: landing_pages {
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}._fivetran_synced ;;
   }
-  measure: avg_session_duration {
+  dimension: avg_session_duration {
     type: number
     sql: ${TABLE}.avg_session_duration ;;
   }
